@@ -1,0 +1,25 @@
+<!-- app.component.html -->
+
+<div class="app-container">
+  <header>
+    <h1>Employee Management System</h1>
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="/employees" routerLinkActive="active">View Employees</a>
+        </li>
+        <li>
+          <a routerLink="/employees/add" routerLinkActive="active">Add Employee</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Employee Management System</p>
+  </footer>
+</div>

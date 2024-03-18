@@ -1,0 +1,30 @@
+<!-- employee-detail.component.html -->
+<div class="employee-detail-container" *ngIf="employee">
+  <div class="employee-header">
+    <h2>Employee Details</h2>
+    <!-- Add any additional buttons or actions here -->
+  </div>
+  <div class="employee-details">
+    <div class="employee-info">
+      <div class="info-item">
+        <label>Employee Number:</label>
+        <span>{{ employee.EmployeeNumber }}</span>
+      </div>
+      <div class="info-item">
+        <label>Name:</label>
+        <span>{{ employee.LastName }}, {{ employee.FirstName }}</span>
+      </div>
+      <div class="info-item">
+        <label>Birthday:</label>
+        <span>{{ employee.Birthday }}</span>
+      </div>
+      <div class="info-item">
+        <label>Gender:</label>
+        <span>{{ employee.Gender }}</span>
+      </div>
+    </div>
+    <div class="employee-image">
+      <img [src]="employee.Picture" alt="Employee Picture">
+    </div>
+  </div>
+</div>

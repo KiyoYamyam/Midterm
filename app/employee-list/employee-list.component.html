@@ -1,0 +1,22 @@
+<!-- employee-list.component.html -->
+<div *ngIf="employees.length > 0; else noEmployees">
+  <h2>Employee List</h2>
+  <div class="employee-container">
+    <div *ngFor="let employee of employees" class="employee-card">
+      <img [src]="employee.Picture" alt="Employee Image">
+      <div>
+        <p>Employee Number: {{ employee.EmployeeNumber }}</p>
+        <p>Last Name: {{ employee.LastName }}</p>
+        <p>First Name: {{ employee.FirstName }}</p>
+      </div>
+      <div>
+        <button (click)="viewEmployeeDetails(employee.EmployeeId)">View Details</button>
+        <button (click)="editEmployee(employee.EmployeeId)">Edit</button>
+        <button (click)="deleteEmployee(employee.EmployeeId)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #noEmployees>
+  <p>No employees available.</p>
+</ng-template>

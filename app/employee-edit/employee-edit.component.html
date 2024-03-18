@@ -1,0 +1,33 @@
+<!-- employee-edit.component.html -->
+
+<div *ngIf="employee" class="edit-container">
+  <h2>Edit Employee</h2>
+  <div class="form-group">
+    <label for="employeeNumber"><i class="fas fa-user"></i> Employee Number:</label>
+    <input type="text" id="employeeNumber" name="employeeNumber" [(ngModel)]="employee.EmployeeNumber" placeholder="Employee Number">
+  </div>
+  <div class="form-group">
+    <label for="firstName"><i class="fas fa-user"></i> First Name:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="employee.FirstName" placeholder="First Name">
+  </div>
+  <div class="form-group">
+    <label for="lastName"><i class="fas fa-user"></i> Last Name:</label>
+    <input type="text" id="lastName" name="lastName" [(ngModel)]="employee.LastName" placeholder="Last Name">
+  </div>
+  <div class="form-group">
+    <label for="birthday"><i class="fas fa-calendar-alt"></i> Birthday:</label>
+    <input type="date" id="birthday" name="birthday" [(ngModel)]="employee.Birthday" placeholder="Birthday">
+  </div>
+  <div class="form-group">
+    <label for="gender"><i class="fas fa-venus-mars"></i> Gender:</label>
+    <select id="gender" name="gender" [(ngModel)]="employee.Gender" placeholder="Gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="picture"><i class="fas fa-image"></i> Picture URL:</label>
+    <input type="text" id="picture" name="picture" [(ngModel)]="employee.Picture" placeholder="Picture URL">
+  </div>
+  <button class="btn-save" (click)="saveChanges()">Save</button>
+</div>
